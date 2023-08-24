@@ -1,0 +1,285 @@
+@font-face {
+    font-family: bariolregular;
+    src: url(../fonts/bariol_regular-webfont.eot);
+    src: url(../fonts/bariol_regular-webfont.eot?#iefix) format(embedded-opentype),
+         url(../fonts/bariol_regular-webfont.woff2) format(woff2),
+         url(../fonts/bariol_regular-webfont.woff) format(woff),
+         url(../fonts/bariol_regular-webfont.ttf) format(truetype),
+         url(../fonts/bariol_regular-webfont.svg#bariolregular) format(svg);
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+    /* Añadido nuevo */
+    font-family: bariolregular;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* font-size: large; */
+}
+input{
+    letter-spacing: 0px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    /* height: 10vh; */
+    background-color: lightslategray;
+    /* padding: 1%; */
+    padding: 2%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.logo {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 40px;
+    width: 40px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+/* nav{
+    background-color: tomato;
+} */
+header>div{
+    padding: 15px 15px;
+}
+nav{
+    display: flex;
+}
+nav>button{
+    padding: 15px 30px;
+    float: left;
+    background-color: rgb(192, 42, 0);
+    /* background-color: #eb5e28; */
+    border: none;
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    height: 743px;
+    /* height: 80vh; */
+    flex-wrap: wrap;
+}
+section{
+    width: 70%;
+    padding: 2%;
+    height: 743px;
+    /* height: 80vh; */
+    
+    /* NUEVO  Esto crea en la section una barra hacia abajo*/
+    /* overflow: auto; */
+}
+#division{
+    height: 5px;
+    background-color: black;
+}
+aside{
+    width: 30%;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /*Puedo poner center si no queda bien cuadrado*/
+    height: 743px;
+    /* height: 80vh; */
+}
+aside>div{
+    background-color: tomato;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    height: 35%;
+}
+footer{
+    width: 100%;
+    background-color: lightslategray;
+    padding: 2%;
+    /* height: 20%;  ----------   */
+    height: 100px;
+    /* height: 10vh; */
+    margin: 0 auto 0 auto;
+}
+/* footer>div:nth-child(1){
+    background-color: tomato;
+} */
+footer>div>button{
+    padding: 15px 10px;
+    float: left;
+    background-color: rgb(192, 42, 0);
+    border: none;
+    color: white;
+    /* border-radius: 25% 22% 22% 25% / 25% 25% 25% 25%;
+    width: 100px; */
+
+}
+/* footer>div:nth-child(2){
+    background-color: orange;
+    padding: 15px 15px;
+} */
+footer>div>a{
+    margin-left: 20px;
+}
+.navEnlaces>button:hover{
+    /* Con esto únicamente le damos la sombra cuando hay un hover */
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+    -moz-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+    background-color: rgb(255, 38, 0);
+}
+button>a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Cuando llega a 800 pasa lo siguiente*/
+@media screen and (max-width: 800px){
+    header{
+        height: 100%;
+        padding: 0%;
+    }
+    header>div{
+        flex: 100%;
+        text-align: center;
+    }
+    nav{
+        flex: 100%;
+        justify-content: center;
+    }
+    nav>button{
+        width: 100%;
+    }
+    main{
+        height: 100%;
+    }
+    section{
+        width: 100%;
+        height: 100%;
+    }
+    aside{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+    aside>div{
+        width: 45%;
+        height: 100%;
+    }
+    footer{
+        height: 80%;
+    }
+    footer>div>a{
+        margin-left: 10px;
+    }
+    
+}
+
+/*Cuando llega a 600 pasa lo siguiente*/
+@media screen and (max-width: 610px){
+    header{
+        height: 100%;
+        padding: 0%;
+    }
+    header>div{
+        flex: 100%;
+        text-align: center;
+    }
+    nav{
+        flex: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav>button{
+        width: 100%;
+    }
+    main{
+        height: 100%;
+    }
+    section{
+        width: 100%;
+        height: 100%;
+    }
+    aside{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+    aside>div{
+        width: 90%;
+        height: 100%;
+    }
+    footer{
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
+        padding: 0%;
+    }
+    footer>div:nth-child(1){
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer>div>button{
+        width: 100%;
+    }
+    footer>div:nth-child(2){
+        padding: 2%;
+    }
+    /* Pagina de contacto */
+    .container_contacto>div{
+        width: 100%;
+    }
+}
+
+
+/* ****************** */
+/* PÁGINA DE CONTACTO */
+/* ****************** */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+.container_contacto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.container_contacto>div{
+    margin-top: 2%;
+}
+#contacto{
+    text-align: center;
+}
+
+/* Paleta posible */
+
+/* #eb5e28
+#252422
+#403d39
+#ccc5b9
+#fffcf2 */
+
+/* #0c1721 */
+/* FF4301 */
+/* FA7D09 */
+/* #333535 */
+
+
+/* Fuente */
+/* Ubuntu-Title.ttf */

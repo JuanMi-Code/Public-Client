@@ -1,0 +1,18 @@
+#fondo_progreso,
+#fondo_progreso_aud {
+    width: 400px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    border-radius: 20px;
+}
+
+#progreso,
+#progreso_aud {
+    margin-top: 5px;
+    /* width: 10%; */
+    height: 10px;
+    background-color: aqua;
+    position: relative;
+    border-radius: 10px
+}

@@ -1,0 +1,200 @@
+/* Propiedades genéricas */
+#principal{
+    display: flex;
+    flex-direction:row;
+}
+.divContenidoAnimado{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.divAnimado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    color: black;
+}
+.enlaceAnimado:link {
+    text-decoration: none;
+}
+
+#divAnimado1 {
+    transform:  /* Movimiento 3d, ejes X,Y,Z */
+      scale(0.75)
+      rotateY(-30deg)
+      rotateX(45deg)
+      translateZ(4.5rem);
+    transform-origin: 50% 100%;    /* Indica  el origen de la transformación, por así decirlo, la ubicación origen del elemento que se va a transformar*/
+    transform-style: preserve-3d;   /* Los elementos secundarios se aplanan en el plano del elemento */
+    box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.25);
+    transition: 0.6s ease transform; 
+}
+#divAnimado1:hover {
+  transform: scale(1);
+}
+#divAnimado1::before {
+  transform: translateZ(4rem);
+}
+#divAnimado1:hover {
+  transform: translateZ(0);
+}
+#divAnimado1::after {
+  transform: translateZ(-4rem);
+  
+}
+#divAnimado1:hover {
+  transform: translateZ(-1px);
+}
+
+
+/* Div 2 */
+#divAnimado2:hover{
+    animation: float 2s infinite;
+}
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translatey(-20px);
+        width: 160px;
+        height: 160px;
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+}
+
+/* Div 3 */
+#divAnimado3{
+    /* transform y transition */
+    transition: width 0.5s, height 0.5s, border 0.5s ,box-shadow 0.5s;
+}
+#divAnimado3:hover{
+    width: 180px;
+    height: 180px;
+    border: 25px solid red;
+    -webkit-box-shadow: 13px -2px 10px 3px #ff0000;
+    box-shadow: 13px -2px 10px 3px #ff0000;
+}
+
+/* Div 4 */
+#divAnimado4{
+    /* transform y transition */
+    transition: width 0.5s, height 0.5s, border-radius 0.5s; background-color: 0.5s;
+}
+#divAnimado4:hover{
+    border-radius: 25% 50% 10% 50%/25% 50% 10% 50%;
+    width: 180px;
+    height: 180px;
+    rotate: 360deg;
+    background-color: lightgreen;
+}
+
+/* Div 5 */
+#divAnimado5:hover{
+    /* keyframes */
+    animation: mymove 2s;
+}
+@keyframes mymove {
+    0%   {
+        height: 150px; 
+        width: 150px; 
+        top: 0px; 
+        right: 0px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        }
+    25%  {
+        height: 200px; 
+        width: 200px; 
+        top: 50px; 
+        right: 0px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        background-color: lightcoral;
+    }
+    50%  {
+        height: 200px; 
+        width: 200px; 
+        top: 50px; 
+        right: 50px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        rotate: 50deg;
+        background-color: lightcoral;
+    }
+    70%  {
+        height: 150px; 
+        width: 150px; 
+        top: 0px; 
+        right: 50px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        rotate: 360deg;
+        background-color: lightcoral;
+    }
+    100% {
+        height: 150px; 
+        width: 150px; 
+        top: 0px; 
+        right: 0px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+    }
+}
+
+/* Div 6 */
+#divAnimado6:hover{
+    /* keyframes */
+    animation: mymove2 2s;
+    
+}
+@keyframes mymove2 {
+    0%   {
+        height: 150px; 
+        width: 150px; 
+        top: 0px; 
+        right: 0px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        background-color: blue;
+        }
+    25%  {
+        height: 150px; 
+        width: 250px; 
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+    }
+    50%  {
+        height: 150px; 
+        width: 250px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        rotate: 180deg;
+    }
+    70%  {
+        height: 150px; 
+        width: 150px; 
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        rotate: 180deg;
+    }
+    100% {
+        height: 150px; 
+        width: 150px; 
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+    }
+}

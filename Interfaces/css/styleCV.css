@@ -1,0 +1,40 @@
+#desplegado_experiencia,
+#desplegado_formacion,
+#desplegado_informatica {
+    padding: 20px;
+    display: none;
+    background-color: #FA7D09;
+    border-radius: 5px;
+}
+
+#experiencia,
+#formacion, #informatica {
+    padding: 5px;
+    text-align: center;
+    background-color: #FA7D09;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Para que la flecha gire en cada apartado*/
+.seccion_cv{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.flecha_cv_img{
+    width: 30px;
+    transition: 1s;
+}
+.flecha_cv_img:hover{
+    transform: rotate(90deg);
+}
+
+
+/* html{
+    transition: 3s;
+}
+html:hover{
+    transform: rotate(3600deg);
+} */

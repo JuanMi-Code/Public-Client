@@ -1,0 +1,29 @@
+#arkanoid{
+    text-align: center;
+}
+#canvas{
+    background-image: url(../img/fondoCanvas.jpg);
+    background-size: 100% 100%;
+}
+.heart{
+    width: 100px;
+}
+#tablaInfo{
+    text-align: center;
+    margin: auto;
+}
+#tablaIzq{
+    text-align: start;
+}
+#tablaDch{
+    text-align: start;
+}
+#puntuacion{
+    margin-left: 50px;
+}
+#contDisparo{
+    margin-left: 50px;
+}
+#vidas{
+    margin-left: 50px;
+}

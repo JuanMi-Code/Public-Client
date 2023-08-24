@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/styleDragAndDrop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <header class="container">
+        <div>
+            <a href="#"><img src="../media/logo.jpg" alt="logo" width="42" height="42" class="logo"></a>
+        </div>
+        <nav class="navEnlaces">
+            <button><a href="../index.html">Inicio</a></button>
+            <button><a href="cv.html">Curriculim</a></button>
+            <button><a href="proyectos.html">Proyectos</a></button>
+            <button><a href="contacto.html">Contacto</a></button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- Customizador -->
+            <span id="texto_jquery"></span>
+            
+            <br><br>
+            <h1>Por favor posicione los materiales en el lugar que corresponda </h1>
+            <br><br><br>
+
+            <div class="container">
+
+                <div id="papel" class="drop" ondrop="dropPapel(this, event)" ondragenter="return false"
+                    ondragover="return false">
+                    <span>Papel</span>
+                </div>
+
+                <div id="carton" class="drop" ondrop="dropCarton(this, event)" ondragenter="return false"
+                    ondragover="return false">
+                    <span>Cartón</span>
+                </div>
+
+            </div>
+
+
+            <div id="unassigned" class="container_almacen" ondrop="dropAlmacen(this, event)" ondragenter="return false"
+                ondragover="return false">
+                <span>Almacén</span>
+                <div class="container_almacen_datos">
+                    <img src="../media/papel.png" draggable="true" class="almacen_papel" id="A29"
+                        ondragstart="dragMaterial(this,event)"></img>
+                    <img src="../media/papel.png" draggable="true" class="almacen_papel" id="A30"
+                        ondragstart="dragMaterial(this,event)"></img>
+                    <img src="../media/papel.png" draggable="true" class="almacen_papel" id="A31"
+                        ondragstart="dragMaterial(this,event)"></img>
+                    <img src="../media/carton.png" draggable="true" class="almacen_carton" id="A32"
+                        ondragstart="dragMaterial(this,event)"></img>
+                    <img src="../media/carton.png" draggable="true" class="almacen_carton" id="A33"
+                        ondragstart="dragMaterial(this,event)"></img>
+                    <img src="../media/carton.png" draggable="true" class="almacen_carton" id="A34"
+                        ondragstart="dragMaterial(this,event)"></img>
+                </div>
+            </div>
+            <br><br>
+
+        </section>
+        <aside>
+            <div>
+                <div id="customizar">
+                    <span>Customizar y Accesible</span>
+                </div>
+
+                <div id="customizar_desplegado">
+                    <label for="estilos">Estilos</label>
+                    <select name="estilo" id="estilos">
+                        <option value="estilo1">Estilo 1</option>
+                        <option value="estilo2">Estilo 2</option>
+                        <option value="estilo3">Estilo 3</option>
+                    </select>
+                    <br>
+                    <br>
+                    <hr>
+                    <br>
+                    <span class="titulos_customizar">Accesibilidad</span>
+                    <br>
+                    <br>
+                    <button id="aumentar_letra"> + </button>
+                    <span>Letra</span>
+                    <button id="reducir_letra"> - </button>
+                    <br>
+                    <br>
+                    <span>Blanco y negro</span>
+                    <button id="color_simple_on">ON</button><button id="color_simple_off">OFF</button>
+                </div>
+            </div>
+
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur inventore soluta
+                excepturi in tenetur necessitatibus. Dolorem sapiente omnis hic modi eaque deserunt impedit laudantium
+                ullam? Perspiciatis, fugit. Quo, blanditiis.
+            </div>
+        </aside>
+    </main>
+    <footer class="container">
+        <div class="navEnlaces">
+            <button><a href="../index.html">Inicio</a></button>
+            <button><a href="cv.html">Curriculim</a></button>
+            <button><a href="proyectos.html">Proyectos</a></button>
+            <button><a href="contacto.html">Contacto</a></button>
+        </div>
+        <div>
+            <a href="#"><img src="../media/github.png" alt="logo github" width="42" height="42"></a>
+            <a href="#"><img src="../media/instagram.png" alt="logo instagram" width="42" height="42"></a>
+            <a href="#"><img src="../media/twitter.png" alt="logo twitter" width="42" height="42"></a>
+            <a href="#"><img src="../media/facebook.png" alt="logo facebook" width="42" height="42"></a>
+        </div>
+    </footer>
+
+    <script src="../js/appDragAndDrop.js"></script>
+    <script src="../js/customizador.js"></script>
+</body>
+
+</html>

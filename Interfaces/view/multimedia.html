@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/styleMedia.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <a href="../#"><img src="../media/logo.jpg" alt="logo" width="42" height="42" class="logo"></a>
+        </div>
+        <nav class="navEnlaces">
+            <button><a href="../index.html">Inicio</a></button>
+            <button><a href="../view/cv.html">Curriculim</a></button>
+            <button><a href="../view/proyectos.html">Proyectos</a></button>
+            <button><a href="../view/contacto.html">Contacto</a></button>
+        </nav>
+    </header>
+    <main>
+        <section id="principal">
+            
+            <!-- Customizador -->
+            <span id="texto_jquery"></span>
+
+            <div>
+                <audio id="audio">
+                    <source src="../media/mario.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+                <div id="fondo_progreso_aud">
+                    <div id="progreso_aud"></div>
+                </div>
+                <br>
+                <br>
+                <button id="playPauseAudio">Play/Pause</button>
+                <button id="restoreAudio">Restablecer</button>
+                <button id="sonido">Audio Si/No</button>
+
+                <label for="velocidadAudio">Velocidad:</label>
+                <select name="velocidadAudio" id="velocidadAudio">
+                    <option value="0.5">0.5</option>
+                    <option value="1" selected>1</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                </select>
+                <button id="restablecerVelocidadAudio">Restablecer velocidad</button>
+                <button id="masTiempoAudio">+5</button>
+                <button id="menosTiempoAudio">-5</button>
+            </div>
+
+            <br><br><br>
+
+            <div>
+                <video width="400" id="video">
+                    <source src="../media/video.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <br>
+                <div id="fondo_progreso">
+                    <div id="progreso"></div>
+                </div>
+                <br>
+                <br>
+                <button id="playPause">Play/Pause</button>
+                <button id="restore">Restablecer</button>
+                <button id="video_audio">Audio Si/No</button>
+
+                <label for="velocidadVideo">Velocidad:</label>
+                <select name="velocidadVideo" id="velocidadVideo">
+                    <option value="0.5">0.5</option>
+                    <option value="1" selected>1</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                </select>
+                <button id="restablecerVelocidadVideo">Restablecer velocidad</button>
+                <button id="masTiempo">+5</button>
+                <button id="menosTiempo">-5</button>
+            </div>
+
+        </section>
+        <aside>
+            <div>
+                <div id="customizar">
+                    <span>Customizar y Accesible</span>
+                </div>
+
+                <div id="customizar_desplegado">
+                    <label for="estilos">Estilos</label>
+                    <select name="estilo" id="estilos">
+                        <option value="estilo1">Estilo 1</option>
+                        <option value="estilo2">Estilo 2</option>
+                        <option value="estilo3">Estilo 3</option>
+                    </select>
+                    <br>
+                    <br>
+                    <hr>
+                    <br>
+                    <span class="titulos_customizar">Accesibilidad</span>
+                    <br>
+                    <br>
+                    <button id="aumentar_letra"> + </button>
+                    <span>Letra</span>
+                    <button id="reducir_letra"> - </button>
+                    <br>
+                    <br>
+                    <span>Blanco y negro</span>
+                    <button id="color_simple_on">ON</button><button id="color_simple_off">OFF</button>
+                </div>
+            </div>
+
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur inventore soluta
+                excepturi in tenetur necessitatibus. Dolorem sapiente omnis hic modi eaque deserunt impedit laudantium
+                ullam? Perspiciatis, fugit. Quo, blanditiis.
+            </div>
+        </aside>
+    </main>
+    <footer class="container">
+        <div class="navEnlaces">
+            <button><a href="../index.html">Inicio</a></button>
+            <button><a href="../view/cv.html">Curriculim</a></button>
+            <button><a href="../view/dragAndDrop.html">Proyectos</a></button>
+            <button><a href="../view/contacto.html">Contacto</a></button>
+        </div>
+        <div>
+            <a href="../#"><img src="../media/github.png" alt="logo github" width="42" height="42"></a>
+            <a href="../#"><img src="../media/instagram.png" alt="logo instagram" width="42" height="42"></a>
+            <a href="../#"><img src="../media/twitter.png" alt="logo twitter" width="42" height="42"></a>
+            <a href="../#"><img src="../media/facebook.png" alt="logo facebook" width="42" height="42"></a>
+        </div>
+    </footer>
+    <script src="../js/multimedia.js"></script>
+    <script src="../js/customizador.js"></script>
+</body>
+
+</html>
